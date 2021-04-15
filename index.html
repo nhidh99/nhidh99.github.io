@@ -8,73 +8,178 @@
     </head>
 
     <body>
-        <div class="min-h-screen bg-gray-200 font-sans">
-            <div class="w-full lg:w-2/3 m-auto">
-                <section>
-                    <header class="bg-white shadow text-center text-3xl py-2">
-                        ABOUT ME
-                    </header>
+        <div class="min-h-screen bg-gray-200 font-sans flex flex-col gap-10">
+            <section>
+                <header class="bg-white shadow text-center text-3xl py-2">
+                    ABOUT ME
+                </header>
 
-                    <div class="mt-5 flex flex-col lg:flex-row gap-5">
-                        <div class="w-full lg:w-1/5 shadow">
-                            <img
-                                src="./image.jpg"
-                                alt="avatar"
-                                class="w-1/3 lg:w-full mx-auto rounded"
-                            />
-                        </div>
+                <div
+                    class="mt-5 w-11/12 xl:w-2/3 flex flex-col xl:flex-row gap-5 mx-auto"
+                >
+                    <div class="w-full xl:w-1/5">
+                        <img
+                            src="./image.jpg"
+                            alt="avatar"
+                            class="w-1/3 xl:w-full mx-auto rounded shadow"
+                        />
+                    </div>
+                    <div
+                        class="w-full xl:w-4/5 bg-white rounded p-5 flex flex-col gap-3 shadow text-justify"
+                    >
+                        <p>
+                            My name is <b>Dinh Hoang Nhi</b>, a developer with
+                            <b
+                                >1-year experience in Java-ReactJS web
+                                technologies</b
+                            >
+                            and good knowledge about
+                            <i
+                                >Database Design, Design Pattern,
+                                Object-Oriented Analysis and Design.</i
+                            >
+                        </p>
+
+                        <p>
+                            Learning about
+                            <b>Java backend development</b> and
+                            <b>ReactJS frontend development</b> with other
+                            related web technologies is what I am passionate
+                            about. Sharing knowledge and helping others at work
+                            about my favorite stack can totally make my day.
+                        </p>
+
+                        <p>
+                            I am also the owner of the blog
+                            <b
+                                ><a
+                                    href="https://codergamo.com"
+                                    class="text-blue-600"
+                                    target="_blank"
+                                    >codergamo.com</a
+                                ></b
+                            >, a place to show some simple surprise discovery
+                            about web technologies or development processes
+                            throughout my learning journey.
+                        </p>
+
+                        <p>
+                            <b>My favorite books</b> are
+                            <i
+                                >Clean Code, Head First Java, Head First Design
+                                Pattern, The Pragmatic Programmer.</i
+                            >
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <header class="bg-white shadow text-center text-3xl py-2">
+                    TECHNICAL SKILLS
+                </header>
+
+                <div
+                    class="mt-5 w-11/12 xl:w-2/3 flex flex-col xl:flex-row gap-5 mx-auto"
+                >
+                    <div class="flex flex-col xl:flex-row gap-5 w-full">
                         <div
-                            class="w-full lg:w-4/5 bg-white rounded p-5 flex flex-col gap-3 shadow text-justify"
+                            class="xl:w-1/3 bg-white shadow p-5 flex flex-col gap-3"
                         >
-                            <p>
-                                My name is <b>Dinh Hoang Nhi</b>, a developer
-                                with
-                                <b
-                                    >1-year experience in Java-ReactJS web
-                                    technologies</b
-                                >
-                                and good knowledge about
-                                <i
-                                    >Database Design, Design Pattern,
-                                    Object-Oriented Analysis and Design.</i
-                                >
-                            </p>
+                            <section>
+                                <header class="font-semibold">
+                                    PROGRAMMING LANGUAGES
+                                </header>
+                                <ul class="list-disc ml-5">
+                                    <li>Java, C#</li>
+                                    <li>Javascript</li>
+                                    <li>HTML, CSS</li>
+                                </ul>
+                            </section>
 
-                            <p>
-                                Learning about
-                                <b>Java backend development</b> and
-                                <b>ReactJS frontend development</b> with other
-                                related web technologies is what I am passionate
-                                about. Sharing knowledge and helping others at
-                                work about my favorite stack can totally make my
-                                day.
-                            </p>
+                            <section>
+                                <header class="font-semibold">
+                                    FRAMEWORKS & PLATFORMS
+                                </header>
+                                <ul class="list-disc ml-5">
+                                    <li>Java Spring Framework</li>
+                                    <li>Hibernate Framework</li>
+                                    <li>ReactJS, Tailwind CSS</li>
+                                    <li>Web Restful API</li>
+                                </ul>
+                            </section>
+                        </div>
 
-                            <p>
-                                I am also the owner of the blog
-                                <b
-                                    ><a
-                                        href="https://codergamo.com"
-                                        class="text-blue-600"
-                                        target="_blank"
-                                        >codergamo.com</a
-                                    ></b
-                                >, a place to show some simple surprise
-                                discovery about web technologies or development
-                                processes throughout my learning journey.
-                            </p>
+                        <div
+                            class="xl:w-1/3 bg-white shadow p-5 flex flex-col gap-3"
+                        >
+                            <section>
+                                <header class="font-semibold">DATABASE</header>
+                                <ul class="list-disc ml-5">
+                                    <li>MariaDB</li>
+                                    <li>MySQL</li>
+                                    <li>SQL Server</li>
+                                </ul>
+                            </section>
 
-                            <p>
-                                <b>My favorite books</b> are
-                                <i
-                                    >Clean Code, Head First Java, Head First
-                                    Design Pattern, The Pragmatic Programmer.</i
-                                >
-                            </p>
+                            <section>
+                                <header class="font-semibold">
+                                    VERSION CONTROL
+                                </header>
+                                <ul class="list-disc ml-5">
+                                    <li>Git (Git Shell & Github)</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <header class="font-semibold">IDE</header>
+                                <ul class="list-disc ml-5">
+                                    <li>IntelliJ IDEA</li>
+                                    <li>Visual Studio 2019</li>
+                                </ul>
+                            </section>
+                        </div>
+
+                        <div
+                            class="xl:w-1/3 bg-white shadow p-5 flex flex-col gap-3"
+                        >
+                            <section>
+                                <header class="font-semibold">
+                                    FOREIGN LANGUAGE
+                                </header>
+                                <ul class="list-disc ml-5">
+                                    <li>TOEIC: 830/990</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <header class="font-semibold">KNOWLEDGE</header>
+                                <ul class="list-disc ml-5">
+                                    <li>
+                                        Understanding about OOP, Design Pattern,
+                                        SOLID principles, Dependency
+                                        Injection...
+                                    </li>
+                                    <li>
+                                        Experience and understanding about Agile
+                                        and Scrum process.
+                                    </li>
+                                    <li>
+                                        Understanding about Software Design,
+                                        Database Design, Restful API...
+                                    </li>
+                                </ul>
+                            </section>
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
+
+            <section>
+                <header class="bg-white shadow text-center text-3xl py-2">
+                    EXPERIENCE
+                </header>
+            </section>
         </div>
     </body>
 </html>
