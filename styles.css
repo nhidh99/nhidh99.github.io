@@ -17,8 +17,9 @@
     --spacing-8: calc(8 * var(--spacing-1));
     --spacing-12: calc(12 * var(--spacing-1));
 
-    --text-md: max(0.75rem, 14px);
-    --text-lg: max(1.5rem, 16px);
+    --text-md: 14px;
+	--text-lg: 15px;
+    --text-xl: 18px;
 
     --width-1\/12: calc(1 * 100% / 12);
     --width-3\/12: calc(3 * var(--width-1\/12));
@@ -84,7 +85,7 @@ div.section-box {
 header {
     padding-top: var(--spacing-4);
     padding-bottom: var(--spacing-4);
-    font-size: var(--text-lg);
+    font-size: var(--text-xl);
     text-align: center;
 }
 
@@ -240,6 +241,7 @@ header {
     display: inline-block;
     color: white;
     border-radius: var(--border-radius-md);
+	font-size: var(--text-lg);
 }
 
 .technicals--wrapper {
@@ -284,20 +286,12 @@ header {
 }
 
 @media (min-width: 1024px) {
-    #root {
-        font-size: var(--text-md);
-    }
-
     .social-nav {
         gap: var(--spacing-6);
     }
 }
 
 @media (min-width: 1280px) {
-    #root {
-        font-size: var(--text-md);
-    }
-
     header .social-nav {
         gap: var(--spacing-4);
     }
