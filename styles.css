@@ -14,9 +14,6 @@
     --text-lg: max(1.875rem, 16px);
     --text-xl: max(2rem, 18px);
 
-    --min-text-md: 14px;
-    --min-text-xl: 18px;
-
     --width-1\/12: calc(1 * 100% / 12);
     --width-3\/12: calc(3 * var(--width-1\/12));
     --width-8\/12: calc(8 * var(--width-1\/12));
