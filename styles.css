@@ -32,10 +32,13 @@ body {
     line-height: 1.5em;
 }
 
-div,
-p {
+div, p {
     margin: 0;
     padding: 0;
+}
+
+p:not(:last-of-type) {
+	margin-bottom: var(--spacing-3);
 }
 
 ul {
@@ -121,7 +124,6 @@ header {
 }
 
 .section-box-col {
-    text-align: justify;
     width: var(--width-11\/12);
     margin-left: auto;
     margin-right: auto;
@@ -135,8 +137,11 @@ header {
     margin-right: auto;
 }
 
+.technicals--row:not(:first-of-type),
 .technicals--cell:not(:first-of-type),
+.experience--row:not(:first-of-type),
 .experience--cell:not(:first-of-type),
+.projects--row:not(:first-of-type),
 .projects--cell:not(:first-of-type) {
     margin-top: var(--spacing-6);
 }
@@ -182,9 +187,13 @@ header {
     text-align: center;
 }
 
+.education--content > p {
+	margin-bottom: 0;
+}
+
 .education--logo {
     display: block;
-    margin: var(--spacing-3) auto;
+    margin: 0 auto var(--spacing-3) auto;
 }
 
 @media (min-width: 1024px) {
