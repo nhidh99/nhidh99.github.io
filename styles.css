@@ -16,8 +16,12 @@
     --text-md-tablet: 20px;
     --text-lg-tablet: 25px;
 
-    --text-md-mobile: 26px;
-    --text-lg-mobile: 40px;
+    --text-md-mobile: 34px;
+    --text-lg-mobile: 42px;
+
+	--icon-size-laptop: 20px;
+	--icon-size-tablet: 35px;
+	--icon-size-mobile: 50px;
 
     --width-1\/12: calc(1 * 100% / 12);
     --width-3\/12: calc(3 * var(--width-1\/12));
@@ -83,14 +87,11 @@ header {
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
     text-align: center;
-	display: flex;
-	justify-content: center;
-	gap: var(--spacing-4);
-}
-
-.social-item {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-8);
+    font-size: var(--icon-size-mobile);
     color: white;
-    font-size: var(--text-lg-mobile);
 }
 
 .list-disc {
@@ -207,9 +208,13 @@ header {
         font-size: var(--text-md-tablet);
     }
 
-    header,
-    .social-item {
+    header {
         font-size: var(--text-lg-tablet);
+    }
+
+    .social-nav {
+        gap: var(--spacing-6);
+		font-size: var(--icon-size-tablet);
     }
 
     .experience--list,
@@ -223,9 +228,11 @@ header {
         font-size: var(--text-md-laptop);
     }
 
-    header,
-	.social-item {
-        font-size: var(--text-lg-laptop);
+    header
+
+    .social-nav {
+        gap: var(--spacing-4);
+		font-size: var(--icon-size-laptop);
     }
 
     .list-disc {
