@@ -13,8 +13,8 @@
     --text-md-laptop: max(1rem, 14px);
     --text-lg-laptop: max(1.875rem, 16px);
 
-	--text-md-tablet: 20px;
-	--text-lg-tablet: 25px;
+    --text-md-tablet: 20px;
+    --text-lg-tablet: 25px;
 
     --text-md-mobile: 26px;
     --text-lg-mobile: 40px;
@@ -57,6 +57,40 @@ header {
     padding-bottom: var(--spacing-2);
     font-size: var(--text-lg-mobile);
     text-align: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.social-nav {
+    background: linear-gradient(
+        90deg,
+        #623f88,
+        #032b95,
+        #051454,
+        #09072f,
+        #030210
+    );
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    text-align: center;
+	display: flex;
+	justify-content: center;
+	gap: var(--spacing-4);
+}
+
+.social-item {
+    color: white;
+    font-size: var(--text-lg-mobile);
 }
 
 .list-disc {
@@ -169,15 +203,16 @@ header {
 }
 
 @media (min-width: 1024px) {
-	#root {
+    #root {
         font-size: var(--text-md-tablet);
     }
 
-    header {
+    header,
+    .social-item {
         font-size: var(--text-lg-tablet);
     }
 
-	.experience--list,
+    .experience--list,
     .projects--list {
         margin-top: var(--spacing-3);
     }
@@ -188,7 +223,8 @@ header {
         font-size: var(--text-md-laptop);
     }
 
-    header {
+    header,
+	.social-item {
         font-size: var(--text-lg-laptop);
     }
 
