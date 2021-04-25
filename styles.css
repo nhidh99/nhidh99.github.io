@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 :root {
     --box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
 
@@ -18,11 +11,9 @@
     --spacing-12: calc(12 * var(--spacing-1));
 
     --text-md: 14px;
-	--text-lg: 15px;
-    --text-xl: 18px;
+    --text-lg: 24px;
 
     --width-1\/12: calc(1 * 100% / 12);
-    --width-3\/12: calc(3 * var(--width-1\/12));
     --width-8\/12: calc(8 * var(--width-1\/12));
     --width-11\/12: calc(11 * var(--width-1\/12));
     --width-full: 100%;
@@ -30,10 +21,10 @@
     --border-radius-md: 0.25rem;
     --border-radius-lg: 0.5rem;
 
-    --color-blue: #2563eb;
-    --color-green: #059669;
-    --color-purple: #7c3aed;
-    --color-gray: #edf2f7;
+    --cellor-blue: #2563eb;
+    --cellor-green: #059669;
+    --cellor-purple: #7c3aed;
+    --cellor-gray: #edf2f7;
 }
 
 body {
@@ -41,17 +32,21 @@ body {
     line-height: 1.5em;
 }
 
-p,
-ul,
-li {
+div,
+p {
     margin: 0;
     padding: 0;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: var(--spacing-5);
 }
 
 *,
 ::after,
 ::before {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-width: 0;
     border-style: solid;
@@ -59,46 +54,24 @@ li {
 }
 
 #root {
-    /* min-h-screen bg-gray-200 font-sans pb-12 flex flex-col gap-8 text-4xl xl:text-base */
     min-height: 100vh;
-    background-color: var(--color-gray);
-    padding-bottom: var(--spacing-12);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: var(--spacing-8);
+    background-color: var(--cellor-gray);
     font-family: "Open Sans", sans-serif;
     font-size: var(--text-md);
 }
 
-header,
-div.section-box {
-    -webkit-box-shadow: var(--box-shadow);
-    box-shadow: var(--box-shadow);
-    background-color: white;
+#root > section {
+    padding-bottom: var(--spacing-6);
 }
 
 header {
+    box-shadow: var(--box-shadow);
+    background-color: white;
     padding-top: var(--spacing-4);
     padding-bottom: var(--spacing-4);
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
+    margin-bottom: var(--spacing-6);
     text-align: center;
-}
-
-@-webkit-keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 @keyframes gradient {
@@ -114,24 +87,6 @@ header {
 }
 
 .social-nav {
-    background: -o-linear-gradient(
-        left,
-        #623f88,
-        #032b95,
-        #051454,
-        #09072f,
-        #030210
-    );
-    background: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(#623f88),
-        color-stop(#032b95),
-        color-stop(#051454),
-        color-stop(#09072f),
-        to(#030210)
-    );
     background: linear-gradient(
         90deg,
         #623f88,
@@ -141,16 +96,8 @@ header {
         #030210
     );
     background-size: 400% 400%;
-    -webkit-animation: gradient 5s ease infinite;
     animation: gradient 5s ease infinite;
     text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    gap: var(--spacing-8);
     padding: var(--spacing-2) 0;
 }
 
@@ -159,26 +106,18 @@ header {
     color: white;
 }
 
-.list-disc {
-    list-style-type: disc;
+.social-item:not(:first-of-type) {
     margin-left: var(--spacing-8);
 }
 
-.list-none {
+.social-item:not() .list-none {
     list-style-type: none;
 }
 
 .section-box {
+    background-color: white;
     border-radius: var(--border-radius-lg);
-    gap: var(--spacing-2);
     padding: var(--spacing-5);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
 }
 
 .section-box-col {
@@ -186,34 +125,6 @@ header {
     width: var(--width-11\/12);
     margin-left: auto;
     margin-right: auto;
-}
-
-.section-box-grid {
-    width: var(--width-full);
-    text-align: left;
-}
-
-.about--header,
-.technicals--header {
-    margin-bottom: var(--spacing-6);
-}
-
-.experience--header,
-.projects--header,
-.education--header {
-    margin-bottom: var(--spacing-8);
-}
-
-.experience--wrapper,
-.projects--wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: var(--spacing-8);
 }
 
 .technicals--wrapper,
@@ -224,35 +135,26 @@ header {
     margin-right: auto;
 }
 
+.technicals--cell:not(:first-of-type),
+.experience--cell:not(:first-of-type),
+.projects--cell:not(:first-of-type) {
+    margin-top: var(--spacing-6);
+}
+
 .experience--list,
 .projects--list {
     margin-left: var(--spacing-1);
-    margin-top: var(--spacing-2);
 }
 
 .experience--hgroup,
-.projects--hgroup,
-.education--hgroup {
-    margin-top: calc(-1 * var(--spacing-8));
+.projects--hgroup {
+    margin-bottom: var(--spacing-1);
     padding: var(--spacing-1) var(--spacing-4);
-    -webkit-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
-    position: absolute;
     display: inline-block;
     color: white;
     border-radius: var(--border-radius-md);
-	font-size: var(--text-lg);
-}
-
-.technicals--wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: var(--spacing-5);
+    font-size: var(--text-lg) !important;
 }
 
 .technicals--hgroup {
@@ -260,20 +162,20 @@ header {
 }
 
 .experience--hgroup {
-    background-color: var(--color-blue);
+    background-color: var(--cellor-blue);
 }
 
 .projects--hgroup {
-    background-color: var(--color-green);
+    background-color: var(--cellor-green);
 }
 
 .projects--link {
-    color: var(--color-blue);
+    color: var(--cellor-blue);
     text-decoration: underline;
 }
 
 .education--hgroup {
-    background-color: var(--color-purple);
+    background-color: var(--cellor-purple);
 }
 
 .education--content {
@@ -286,46 +188,55 @@ header {
 }
 
 @media (min-width: 1024px) {
-    .social-nav {
-        gap: var(--spacing-6);
+    .social-item:not(:first-of-type) {
+        margin-left: var(--spacing-6);
     }
 }
 
 @media (min-width: 1280px) {
-    header .social-nav {
-        gap: var(--spacing-4);
-    }
-
-    .list-disc {
-        margin-left: var(--spacing-5);
+    .social-item:not(:first-of-type) {
+        margin-left: var(--spacing-4);
     }
 
     .section-box-col {
         width: var(--width-8\/12);
     }
 
-    .technicals--wrapper {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
+    .technicals--grid,
+    .experience--grid,
+    .projects--grid {
+        margin: calc(-1 * var(--spacing-5));
     }
 
-    .experience--wrapper,
-    .projects--wrapper {
-        display: grid;
-        display: -ms-grid;
-        -ms-grid-columns: minmax(0, 1fr) var(--spacing-5) minmax(0, 1fr);
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        row-gap: var(--spacing-8);
-        -webkit-column-gap: var(--spacing-5);
-        -moz-column-gap: var(--spacing-5);
-        column-gap: var(--spacing-5);
+    .technicals--table,
+    .experience--table,
+    .projects--table {
+        display: table;
+        border-spacing: var(--spacing-5);
+        margin: 0;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .technicals--row,
+    .experience--row,
+    .projects--row {
+        display: table-row;
+    }
+
+    .technicals--cell,
+    .experience--cell,
+    .projects--cell {
+        display: table-cell;
+        margin-top: 0;
     }
 
     .technicals--wrapper,
     .experience--wrapper,
     .projects--wrapper {
+        display: block;
         width: var(--width-8\/12);
+        overflow: hidden;
+        margin: 0 auto;
     }
 }
