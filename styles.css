@@ -19,9 +19,9 @@
     --text-md-mobile: 34px;
     --text-lg-mobile: 42px;
 
-	--icon-size-laptop: 20px;
-	--icon-size-tablet: 35px;
-	--icon-size-mobile: 50px;
+    --icon-size-laptop: 20px;
+    --icon-size-tablet: 35px;
+    --icon-size-mobile: 50px;
 
     --width-1\/12: calc(1 * 100% / 12);
     --width-3\/12: calc(3 * var(--width-1\/12));
@@ -87,6 +87,9 @@ header {
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
     text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     gap: var(--spacing-8);
@@ -214,7 +217,7 @@ header {
 
     .social-nav {
         gap: var(--spacing-6);
-		font-size: var(--icon-size-tablet);
+        font-size: var(--icon-size-tablet);
     }
 
     .experience--list,
@@ -228,11 +231,9 @@ header {
         font-size: var(--text-md-laptop);
     }
 
-    header
-
-    .social-nav {
+    header .social-nav {
         gap: var(--spacing-4);
-		font-size: var(--icon-size-laptop);
+        font-size: var(--icon-size-laptop);
     }
 
     .list-disc {
@@ -250,6 +251,7 @@ header {
     .experience--wrapper,
     .projects--wrapper {
         display: grid;
+        display: -ms-grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         row-gap: var(--spacing-8);
         column-gap: var(--spacing-5);
